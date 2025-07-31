@@ -18,55 +18,46 @@ export default function HoursLocation() {
           <h1 className="text-4xl md:text-5xl font-bold text-center text-red-900 mb-12">
             Hours & Location
           </h1>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Hours Card */}
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2 text-red-800">
-                  <Clock className="h-6 w-6" />
-                  <span>Store Hours</span>
-                </CardTitle>
-                <CardDescription>
-                  We're open 24 hours a day, 7 days a week!
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center p-6 bg-red-100 rounded-lg">
+          <div className="mb-12 flex justify-center">
+            <Card className="w-full max-w-2xl h-fit text-center">
+              <CardContent className="space-y-6">
+                {/* Store Hours Section */}
+                <div className="p-6 bg-red-100 rounded-lg mt-4">
                   <h3 className="text-2xl font-bold text-red-800 mb-2">
                     Open 24/7
                   </h3>
                   <p className="text-red-700">Monday through Sunday</p>
                   <p className="text-red-700">All day, every day</p>
                 </div>
+
+                {/* Contact Section */}
                 <div className="space-y-2 text-gray-700">
-                  <p className="flex items-center space-x-2">
+                  <p className="flex justify-center items-center space-x-2">
                     <Phone className="h-4 w-4 text-red-600" />
                     <span>Call us: +1 (718) 555-2311</span>
                   </p>
-                  <p className="flex items-center space-x-2">
+                  <p className="flex justify-center items-center space-x-2">
                     <MapPin className="h-4 w-4 text-red-600" />
                     <span>45 Main Street, Brooklyn, NY 11201, USA</span>
                   </p>
                 </div>
-              </CardContent>
-            </Card>
 
-            {/* Location Info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2 text-red-800">
-                  <MapPin className="h-6 w-6" />
-                  <span>Visit Us</span>
-                </CardTitle>
-                <CardDescription>
-                  Come visit our historic bakery in the heart of Brooklyn
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
+                <hr className="border-t border-gray-200" />
+
+                {/* Visit Us Section */}
+                <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-red-800 mb-2">Address</h3>
+                    <h3 className="flex justify-center items-center space-x-2 text-lg font-semibold text-red-800 mb-1">
+                      <MapPin className="h-5 w-5" />
+                      <span>Visit Us</span>
+                    </h3>
+                    <p className="text-gray-700">
+                      Come visit our historic bakery in the heart of Brooklyn.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-red-800 mb-1">Address</h4>
                     <p className="text-gray-700">
                       45 Main Street
                       <br />
@@ -75,8 +66,9 @@ export default function HoursLocation() {
                       United States
                     </p>
                   </div>
+
                   <div>
-                    <h3 className="font-semibold text-red-800 mb-2">Parking</h3>
+                    <h4 className="font-semibold text-red-800 mb-1">Parking</h4>
                     <p className="text-gray-700">
                       Street parking available. We're located on a well-known
                       landmark street in Brooklyn.
